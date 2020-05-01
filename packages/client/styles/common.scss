@@ -1,0 +1,62 @@
+@import "./variables";
+@import "./font";
+
+h1 {
+	font-size: 96px;
+	letter-spacing: -1.5;
+	font-weight: $weight-light;
+}
+
+h2 {
+	font-size: 60px;
+	letter-spacing: -0.5;
+	font-weight: $weight-light;
+}
+
+h3 {
+	font-size: 48px;
+	letter-spacing: 0;
+	font-weight: $weight-regular;
+}
+
+h4 {
+	font-size: 34px;
+	letter-spacing: 0.25;
+	font-weight: $weight-regular;
+}
+
+h5 {
+	font-size: 24px;
+	letter-spacing: 0;
+	font-weight: $weight-regular;
+}
+
+h6 {
+	font-size: 20px;
+	letter-spacing: 0.25;
+	font-weight: $weight-medium;
+}
+
+.body1 {
+	font-size: 16px;
+	letter-spacing: 0.5;
+	font-weight: $weight-regular;
+}
+
+.body2 {
+	font-size: 14px;
+	letter-spacing: 0.25;
+	font-weight: $weight-regular;
+}
+
+.subtitle1 {
+	font-size: 16px;
+	letter-spacing: 0.15;
+	font-weight: $weight-regular;
+}
+
+.subtitle2 {
+	font-size: 14px;
+	letter-spacing: 0.1;
+	font-weight: $weight-medium;
+}
