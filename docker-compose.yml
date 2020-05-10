@@ -9,4 +9,5 @@ services:
       POSTGRES_DB: blog
     volumes:
       - ./docker/data:/var/lib/postgresql/data
-  
+  server:
+    image: node:12.16.1
