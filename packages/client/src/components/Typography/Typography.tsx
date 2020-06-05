@@ -13,31 +13,26 @@ export type TypographyVariant =
 	| "body2"
 	| "subtitle1"
 	| "subtitle2";
-
 export type TypographyProps = {
 	variant?: TypographyVariant;
-	children: JSX.Element | string;
-	color: ColorProps;
-	text: ColorProps;
+	children?: JSX.Element | string;
+	color?: ColorProps;
+	// text: ColorProps;
 };
 
 export default function Typography({
 	variant,
 	children,
-	color,
-	text,
-}: TypographyProps) {
+	...rest
+}: TypographyProps & React.ComponentProps<"div">) {
 	return (
-		<div
-			className={
-				Style[variant] +
-				" " +
-				Style[color + "-color"] +
-				" " +
-				Style[text + "-text-color"]
-			}
-		>
+		<div className={variant} {...rest}>
 			{children}
 		</div>
 	);
 }
+
+Typography.defaultProps = {
+	variant: "body1",
+	color: "primary",
+};
