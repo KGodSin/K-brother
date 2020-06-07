@@ -24,18 +24,6 @@ export type TypographyProps = {
 export default function Typography({
 	variant,
 	children,
-  /*
-	color,
-	text,
-}: TypographyProps) {
-	return (
-		<div
-			className={ac(Style[variant], [
-				Style[color + "-color"],
-				Style[text + "-text-color"],
-			])}
-		>
-   */
 	...rest
 }: TypographyProps & React.ComponentProps<"div">) {
 	return (
@@ -48,3 +36,4 @@ Typography.defaultProps = {
 	variant: "body1",
 	color: "primary",
 };
+
