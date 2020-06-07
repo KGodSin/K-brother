@@ -1,6 +1,7 @@
 import * as React from "react";
 import Style from "./Typography.module.scss";
 import { ColorProps } from "classes/styles";
+import ac from "util/addClassName/addClassName";
 
 export type TypographyVariant =
 	| "h1"
@@ -23,15 +24,26 @@ export type TypographyProps = {
 export default function Typography({
 	variant,
 	children,
+  /*
+	color,
+	text,
+}: TypographyProps) {
+	return (
+		<div
+			className={ac(Style[variant], [
+				Style[color + "-color"],
+				Style[text + "-text-color"],
+			])}
+		>
+   */
 	...rest
 }: TypographyProps & React.ComponentProps<"div">) {
 	return (
-		<div className={variant} {...rest}>
+		<div className={ac(Svariant} {...rest}>
 			{children}
 		</div>
 	);
 }
-
 Typography.defaultProps = {
 	variant: "body1",
 	color: "primary",
